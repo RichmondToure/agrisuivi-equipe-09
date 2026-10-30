@@ -22,10 +22,21 @@ export function moyenneHumidite(releves) {
 // Renvoie 'INCONNU', 'ARROSER', 'DRAINER' ou 'OK'.
 // Les bornes humiditeMin et humiditeMax font partie de la zone 'OK'.
 export function etatIrrigation(humidite, culture) {
-  throw new Error(
-    "TODO Membre 2 : coder etatIrrigation dans src/irrigation.js",
-  );
+  if (humidite === null) {
+    return `INCONNU`;
+  }
+  else if (humidite<culture.humiditeMin) {
+    return `ARROSER`;
+
+  }
+  else if (humidite>culture.humiditeMax) {
+    return `DRAINER`;
+  }
+  else{
+  return `OK`;
 }
+}
+
 
 // Renvoie un tableau d'alertes, une par parcelle, dans le même ordre que parcelles.
 // Chaque alerte : { id, producteur, culture, moyenne, etat }
