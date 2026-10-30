@@ -4,7 +4,16 @@
 // Renvoie une promesse qui se résout après capteur.delai millisecondes avec
 // { parcelle, humidite }, ou qui est rejetée si le capteur n'est pas en ligne.
 export function interrogerCapteur(capteur) {
-  throw new Error("TODO Bonus : coder interrogerCapteur dans src/station.js");
+  return new Promise(function(resolve, reject){
+    setTimeout(function(){
+ if (capteur.enLigne=== true) {
+    resolve({parcelle : capteur.parcelle, 
+              humidite: capteur.humidite});
+  } else {
+    reject(new Error(`Capteur ${capteur.id} hors ligne`));
+  }
+  }, capteur.delai);
+  });
 }
 
 // Même travail que interrogerCapteur, mais ne rejette jamais :
