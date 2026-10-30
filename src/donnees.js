@@ -6,8 +6,16 @@ import { join } from "node:path";
 
 // Lit un fichier JSON et renvoie son contenu converti en valeur JavaScript.
 // En cas de problème, lance une erreur claire qui garde l'erreur d'origine comme cause.
-export async function lireJson(chemin) {
-  throw new Error("TODO Membre 4 : coder lireJson dans src/donnees.js");
+export async function lireJson(chemin) 
+{
+  try{
+    const contenuTexte=await readFile(chemin,"utf8");
+  return JSON.parse(contenuTexte);
+ } catch (erreur){
+  throw new Error (`Impossible de lire le fichier JSON : ${chemin}`,{
+    cause: erreur
+  });
+ }
 }
 
 // Lit les quatre fichiers EN MÊME TEMPS avec Promise.all.

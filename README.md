@@ -26,7 +26,7 @@ Votre équipe de quatre construit cet outil : **AgriSuivi**.
 | Promesses, `async` / `await`, `try` / `catch` (J09)                   | `src/donnees.js`, `src/rapport.js`, bonus `src/station.js` |
 | Tests `node:test` (J10)                                               | dossier `test`                                             |
 | Git et GitHub (J02)                                                   | un dépôt partagé par l'équipe                              |
-
+v
 Aucune bibliothèque externe : seulement Node.js.
 
 ## Les rôles
@@ -164,5 +164,6 @@ La date de la première ligne est celle du jour. Le formateur testera aussi votr
 | Membre 2 — Irrigation |                CAMARA Massa                   |               Massa336              |
 | Membre 3 — Récoltes   |                KONE Fatoumata                 |               Fatma-u               |
 | Membre 4 — Données    |            TOURE Yedanh Guy Richmond          |               RichmondToure         |
-#   a g r i s u i v i - e q u i p e - 0 9  
+#   a g r i s u i v i - e q u i p e - 0 9 
+ 
  
