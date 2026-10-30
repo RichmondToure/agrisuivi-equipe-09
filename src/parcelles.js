@@ -7,13 +7,11 @@ export function formaterParcelle(parcelles) {
   return `${parcelles.id} | ${parcelles.producteur} | ${parcelles.localite} | ${parcelles.culture} | ${parcelles.surface} ha`;
 
 }
-
 // Renvoie la parcelle dont l'id est demandé, ou undefined si elle n'existe pas.
 export function trouverParcelle(parcelles, id) {
-  throw new Error(
-    "TODO Membre 1 : coder trouverParcelle dans src/parcelles.js",
-  );
+  return parcelles.find (p => p.id === id);
 }
+
 
 // Renvoie un nouveau tableau avec seulement les parcelles de cette culture.
 export function parcellesParCulture(parcelles, culture) {
