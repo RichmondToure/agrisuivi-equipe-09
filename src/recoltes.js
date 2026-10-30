@@ -46,6 +46,7 @@ return parcelles.map((parcelle)=>{
 // Renvoie une COPIE du bilan, triée du plus grand revenu au plus petit.
 // Le tableau reçu ne doit pas changer d'ordre.
 export function classerParRevenu(bilan) {
+  return [...bilan].sort((a, b) => b.revenu - a.revenu)
   throw new Error(
     "TODO Membre 3 : coder classerParRevenu dans src/recoltes.js",
   );
